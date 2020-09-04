@@ -40,6 +40,8 @@
         ]
     },
     "devDependencies": {
+        "@types/redux-logger": "^3.0.8",
+        "@types/webpack-env": "^1.15.2",
         "husky": ">=4",
         "lint-staged": ">=10",
         "prettier": "2.1.1"
