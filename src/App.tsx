@@ -1,26 +1,23 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import { reset } from './store/auth'
+import { connect } from 'react-redux'
 
-function App() {
+function App({ reset }: { reset: any }) {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div>
+            TEMPLATE
+            <button onClick={(event) => reset()}>Reset</button>
         </div>
     )
 }
 
-export default App
+const mapDispatchToProps = {
+    reset,
+}
+
+function mapStateToProps(state: any) {
+    return { token: state.auth.token }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

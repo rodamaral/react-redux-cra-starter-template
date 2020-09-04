@@ -1,10 +1,10 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { createLogger } from 'redux-logger'
 import { combineReducers } from 'redux'
-// import auth from './auth'
+import auth from './auth'
 
 const rootReducer = combineReducers({
-    // auth,
+    auth,
 })
 
 const loggerMiddleware = createLogger()
