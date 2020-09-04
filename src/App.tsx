@@ -1,23 +1,22 @@
 import React from 'react'
+import { useMount, useTitle } from 'react-use'
 import './App.css'
-import { reset } from './store/auth'
-import { connect } from 'react-redux'
+import Routes from './pages/Routes'
 
-function App({ reset }: { reset: any }) {
+export default function App() {
+    useTitle('react-redux-cra-starter-template')
+
+    useMount(() => {
+        console.log('Mounted')
+    })
+
     return (
         <div>
-            TEMPLATE
-            <button onClick={(event) => reset()}>Reset</button>
+            <header>Header</header>
+
+            <main>
+                <Routes />
+            </main>
         </div>
     )
 }
-
-const mapDispatchToProps = {
-    reset,
-}
-
-function mapStateToProps(state: any) {
-    return { token: state.auth.token }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
