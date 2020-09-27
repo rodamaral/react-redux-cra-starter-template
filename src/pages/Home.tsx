@@ -1,8 +1,8 @@
 import React from 'react'
-import { reset } from '../store/auth'
+import { reset } from 'store/auth'
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import Button from '../components/Button'
+import Button from 'components/Button'
 
 function Home({ reset }: { reset: Function }) {
     const history = useHistory()
