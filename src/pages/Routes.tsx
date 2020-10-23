@@ -5,7 +5,7 @@ const Home = lazy(() => import('./Home'))
 const Page1 = lazy(() => import('./Page1'))
 const Table = lazy(() => import('./Table'))
 
-export default () => (
+const Routes = () => (
     <Suspense fallback={<div>Loading</div>}>
         <Switch>
             <Route exact path="/">
@@ -22,3 +22,5 @@ export default () => (
         </Switch>
     </Suspense>
 )
+
+export default Routes

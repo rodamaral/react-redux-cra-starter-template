@@ -18,11 +18,11 @@ export default function configureAppStore(preloadedState: any) {
     })
 
     // TODO: hot module replacement
-    if (process.env.NODE_ENV === 'development' && module.hot) {
-        module.hot?.accept('./', () => {
-            module.hot?.accept('./', () => store.replaceReducer(rootReducer))
-        })
-    }
+    // if (process.env.NODE_ENV === 'development' && module.hot) {
+    //     module.hot?.accept('./', () => {
+    //         module.hot?.accept('./', () => store.replaceReducer(rootReducer))
+    //     })
+    // }
 
     return store
 }
