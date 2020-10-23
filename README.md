@@ -1,3 +1,12 @@
+# Personal template
+
+This is an opinionated starter template which makes use of:
+
+-   Create React App
+-   TypeScript
+-   Redux with redux-toolkit
+-   React Router
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
