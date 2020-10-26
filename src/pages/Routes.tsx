@@ -1,24 +1,15 @@
-import React, { lazy, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { Route, Switch } from 'react-router-dom'
-
-const Home = lazy(() => import('./Home'))
-const Page1 = lazy(() => import('./Page1'))
-const Table = lazy(() => import('./Table'))
+import routes from './staticRoutes'
 
 const Routes = () => (
     <Suspense fallback={<div>Loading</div>}>
         <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-
-            <Route path="/page1">
-                <Page1 />
-            </Route>
-
-            <Route path="/table">
-                <Table />
-            </Route>
+            {routes.map(({ component: Component, ...rest }) => (
+                <Route {...rest}>
+                    <Component />
+                </Route>
+            ))}
         </Switch>
     </Suspense>
 )

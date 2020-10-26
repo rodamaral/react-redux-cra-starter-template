@@ -15,7 +15,7 @@ function Home({ reset }: { reset: Function }) {
     return (
         <div>
             Home
-            <Button onClick={onClick}>Reset</Button>
+            <Button onClick={onClick}>Go to Page1</Button>
         </div>
     )
 }
